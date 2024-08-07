@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"><br><br><br>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portofolio.html">Portofolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Lokesh Sai Mandava</h1>
+            <h3>And I'm a <span id="profession">Frontend Developer</span></h3>
+            <p>"Welcome to my portfolio! I'm Lokesh Sai Mandava, and I'm excited to showcase my journey as a budding Frontend Developer."
+                "As a recent graduate in frontend development, I am eager to apply my skills and learn from real-world projects to enhance my craft."
+            </p>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.whatsapp.com" target="_blank"><i class='bx bxl-whatsapp'></i></a>                
+            </div>
+            <a href="resume.pdf.pdf"  class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="home.jpg" alt="Attractive Image" class="home-img">
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const professions = ["Frontend Developer", "YouTuber", "Blogger", "Traveller", "Chef"];
+            const professionElement = document.getElementById('profession');
+            let index = 0;
+
+            function changeProfession() {
+                professionElement.textContent = professions[index];
+                index = (index + 1) % professions.length;
+            }
+            setInterval(changeProfession, 2000);
+        });
+    </script>
+    </section>
+</body>
